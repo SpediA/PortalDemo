@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SpediaWeb.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>SpediA</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Styles.Render("~/styles/bootstrap") %>
+        <%: System.Web.Optimization.Styles.Render("~/styles/spedia") %>
+        <%: System.Web.Optimization.Styles.Render("~/styles/fileinput") %>
+        <%: System.Web.Optimization.Scripts.Render("~/bundles/jquery") %>
+        <%: System.Web.Optimization.Scripts.Render("~/bundles/bootstrap") %>
+        <%: System.Web.Optimization.Scripts.Render("~/bundles/fileinput") %>
+        <%: System.Web.Optimization.Scripts.Render("~/bundles/typeahead") %>
+    </asp:PlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="Cabecalho" />
+</head>
+<body>
+    <form runat="server" onsubmit="showLoading()">
+    <header class="container-fluid">
+        <div class="row space">
+            <div class="col-xs-3 col-xs-offset-1 header-group-button">
+                <a href="#" class="dropdown-toggle btn-group right-space" data-toggle="dropdown"><span class="glyphicon glyphicon-align-justify"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/spedia/Pages/MapaProducao">DF-e</a></li>
+                        <li><a href="/spedia/Pages/BuscaSped">SPED</a></li>
+                    </ul>
+                <a href="/spedia/Pages/MapaProducao" class="btn-group"><img src="/spedia/Content/Images/logo.png" alt="SpediA logo" width="150"></a>
+            </div>
+            <div class="col-xs-2">
+                <div>
+                    <a href="#" class="btn button-secondary" data-toggle="modal" data-target="#uploadArquivo" onclick="buildFileInput(); return false;">
+                        <span class="glyphicon glyphicon-upload"></span>
+                        <span>UPLOAD</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-3 header-group-button text-right">
+                <div class="btn-group right-space text-center">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/spedia/Pages/CadastroUsuario">Cadastro de Usuários</a></li>
+                            <li><a href="/spedia/Pages/CadastroEmpresa">Cadastro de Empresa</a></li>
+                            <li><a href="/spedia/Pages/CadastroAtributoAdicional">Cadastro de Atributo Adicional</a></li>
+                            <li><a href="/spedia/Pages/CadastroCaixaPostal">Cadastro de Caixa Postal</a></li>
+                            <li><a href="/spedia/Pages/StatusPlataforma">Status da Plataforma</a></li>
+                        </ul>
+                </div>
+                <div class="btn-group">
+                    <a href="/spedia/Pages/Notificacao">
+                        <span class="glyphicon glyphicon-bell"></span>
+                        <asp:Label runat="server" ID="LblNumeroNotificacoes" CssClass="badge" Visible="false" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-2 text-right">
+                <a href="#" class="dropdown-toggle btn button-secondary" data-toggle="dropdown">
+                    <asp:Label runat="server" ID="LblUsuario" />
+                </a>
+                    <ul class="dropdown-menu left-space" role="menu">
+                        <li><asp:LinkButton runat="server" ID="BtnSair" OnClick="BtnSair_Click">Sair</asp:LinkButton></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="row line-division">
+            <div class="col-xs-4 col-xs-offset-1">
+                <asp:SiteMapPath runat="server" CssClass="path-separator"
+                    NodeStyle-Font-Underline="false">
+                    <PathSeparatorTemplate>
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </PathSeparatorTemplate>
+                </asp:SiteMapPath>
+            </div>
+            <div class="col-xs-6 text-right sub-bar">
+                <a runat="server" id="BtnVisualizarNFe" href="https://leitorxmlnfe.websiteseguro.com/" target="_blank" class="right-space">
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                </a>
+                <asp:LinkButton runat="server" ID="BtnMapaProducao" PostBackUrl="~/Pages/MapaProducao" class="right-space">
+                    <span class="glyphicon glyphicon-th-large"></span>
+                </asp:LinkButton>
+                <asp:LinkButton runat="server" ID="BtnBusca" PostBackUrl="~/Pages/Busca">
+                    <span class="glyphicon glyphicon-search"></span>
+                </asp:LinkButton>
+            </div>
+        </div>
+    </header>
+    <div id="DivConteudo" class="container body">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <div runat="server" id="DivMensagemUpload" role="alert" visible="false">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <asp:Label runat="server" ID="LblMensagemUpload" />
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder runat="server" ID="Conteudo" />
+    </div>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 space text-right">
+                <small>
+                    <span class="glyphicon glyphicon-copyright-mark"></span>
+                    <span>SPEDIA | Todos os Direitos Reservados - <%= DateTime.Now.Year %></span>
+                </small>
+            </div>
+            <div class="col-xs-5 space text-center">
+                <strong>
+                    <a href="#"><span>TERMOS</span></a>
+                    <span>|</span>
+                    <a href="#"><span>PRIVACIDADE</span></a>
+                    <span>|</span>
+                    <a href="#"><span>SEGURANÇA</span></a>
+                </strong>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="uploadArquivo" tabindex="-1" role="dialog" aria-labelledby="tituloUploadArquivo" aria-hidden="true">
+        <div class="modal-dialog" style="width: 800px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="tituloUploadArquivo">Envio de Documentos</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="left-space right-space">
+                            <asp:FileUpload runat="server" ID="FuArquivo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="DivLoading" class="loading-animation">
+        <img src="/spedia/Content/Images/loader.gif" />
+    </div>
+    <script type="text/javascript">
+
+        var download = false;
+
+        $('#DivConteudo').css('min-height', 500);
+        
+        function buildFileInput() {
+            $('#' + '<%= FuArquivo.ClientID %>').fileinput({
+                browseClass: "btn button-primary",
+                browseLabel: "<span style=\"margin-left: 5px;\">Escolha o Arquivo</span>",
+                browseIcon: '<span class="glyphicon glyphicon-folder-open"></span>',
+                removeClass: "btn button-red",
+                removeLabel: "<span style=\"margin-left: 5px;\">Excluir</span>",
+                removeIcon: '<span class="glyphicon glyphicon-trash"></span>',
+                showPreview: false,
+                uploadClass: "btn button-secondary",
+                uploadLabel: "<span style=\"margin-left: 5px;\">Enviar</span>",
+                uploadIcon: '<span class="glyphicon glyphicon-upload"></span>'
+            });
+        };
+
+        function showLoading(e) {
+            if (!download)
+                $('#DivLoading').css("display", "block");
+        };
+
+        function setDownload() {
+            download = true;
+        };
+
+    </script>
+    </form>
+</body>
+</html>

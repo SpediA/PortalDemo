@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{531A433F-4E74-4E06-8668-C0323B3CF615}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpediaLibrary</RootNamespace>
+    <AssemblyName>SpediaLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentMigrator">
+      <HintPath>..\packages\FluentMigrator.1.4.0.0\lib\40\FluentMigrator.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentMigrator.Runner">
+      <HintPath>..\packages\FluentMigrator.Runner.1.4.0.0\lib\40\FluentMigrator.Runner.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.2.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Dominio.cs" />
+    <Compile Include="Business\GerenciamentoArquivo.cs" />
+    <Compile Include="Business\GerenciamentoAtributoAdicional.cs" />
+    <Compile Include="Business\GerenciamentoCaixaPostal.cs" />
+    <Compile Include="Business\GerenciamentoConta.cs" />
+    <Compile Include="Business\GerenciamentoEmail.cs" />
+    <Compile Include="Business\GerenciamentoEmpresa.cs" />
+    <Compile Include="Business\GerenciamentoNotificacao.cs" />
+    <Compile Include="Business\GerenciamentoPlataforma.cs" />
+    <Compile Include="Business\GerenciamentoUsuario.cs" />
+    <Compile Include="Persistence\AuxiliarNHibernate.cs" />
+    <Compile Include="Persistence\DatabaseMigration\1.0\M001DDL.cs" />
+    <Compile Include="Persistence\DatabaseMigration\1.0\M002DML.cs" />
+    <Compile Include="Persistence\DatabaseMigration\1.0\M004SuporteDiversasContaUso.cs" />
+    <Compile Include="Persistence\DatabaseMigration\1.0\M003ConceitoNotificacao.cs" />
+    <Compile Include="Persistence\DatabaseMigration\ExecutorMigracao.cs" />
+    <Compile Include="Persistence\Repository\RepositorioBase.cs" />
+    <Compile Include="Persistence\Repository\NotificacaoRepositorio.cs" />
+    <Compile Include="Persistence\Repository\UsuarioRepositorio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transfer\PropriedadeAcao.cs" />
+    <Compile Include="Transfer\Arquivo.cs" />
+    <Compile Include="Transfer\ArquivoSped.cs" />
+    <Compile Include="Transfer\AssinaturaSped.cs" />
+    <Compile Include="Transfer\AtributoAdicional.cs" />
+    <Compile Include="Transfer\CaixaPostal.cs" />
+    <Compile Include="Transfer\ControleNotificacao.cs" />
+    <Compile Include="Transfer\DetalheDfe.cs" />
+    <Compile Include="Transfer\DetalheSped.cs" />
+    <Compile Include="Transfer\Empresa.cs" />
+    <Compile Include="Transfer\Extrato.cs" />
+    <Compile Include="Transfer\FiltroBusca.cs" />
+    <Compile Include="Transfer\DataIntervalo.cs" />
+    <Compile Include="Transfer\DocumentoFiscal.cs" />
+    <Compile Include="Transfer\FiltroBuscaSped.cs" />
+    <Compile Include="Transfer\ItemProducao.cs" />
+    <Compile Include="Transfer\ItemProducaoValores.cs" />
+    <Compile Include="Transfer\ModeloBase.cs" />
+    <Compile Include="Transfer\ItemNotificacao.cs" />
+    <Compile Include="Transfer\NotificacaoConta.cs" />
+    <Compile Include="Transfer\OperacaoFiscal.cs" />
+    <Compile Include="Transfer\Parametro.cs" />
+    <Compile Include="Transfer\Participante.cs" />
+    <Compile Include="Transfer\ProdutoServico.cs" />
+    <Compile Include="Transfer\AcaoArquivo.cs" />
+    <Compile Include="Transfer\PropriedadeObjeto.cs" />
+    <Compile Include="Transfer\ResultadoBusca.cs" />
+    <Compile Include="Transfer\ResultadoBuscaSped.cs" />
+    <Compile Include="Transfer\StatusModulo.cs" />
+    <Compile Include="Transfer\StatusModuloData.cs" />
+    <Compile Include="Transfer\Usuario.cs" />
+    <Compile Include="Transfer\UsuarioApi.cs" />
+    <Compile Include="Transfer\ValorIntervalo.cs" />
+    <Compile Include="Util\Autenticacao.cs" />
+    <Compile Include="Util\EnderecosApi.cs" />
+    <Compile Include="Util\AuxiliarJson.cs" />
+    <Compile Include="Util\ConfiguracaoAplicacao.cs" />
+    <Compile Include="Util\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Persistence\Mapping\Notificacao.hbm.xml" />
+    <EmbeddedResource Include="Persistence\Mapping\Usuario.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

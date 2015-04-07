@@ -1,0 +1,62 @@
+[
+  {
+    "Valor": "Grande",
+    "Id": 96
+  },
+  {
+    "Valor": "Pequena",
+    "Id": 98
+  },
+  {
+    "Valor": "Média",
+    "Id": 97
+  },
+  {
+    "Valor": "Norte",
+    "Id": 102
+  },
+  {
+    "Valor": "Sudeste",
+    "Id": 104
+  },
+  {
+    "Valor": "Nordeste",
+    "Id": 106
+  },
+  {
+    "Valor": "Sul",
+    "Id": 103
+  },
+  {
+    "Valor": "Centro-Oeste",
+    "Id": 105
+  },
+  {
+    "Valor": "Até 1000k",
+    "Id": 107
+  },
+  {
+    "Valor": "De 10000k até o infinito",
+    "Id": 113
+  },
+  {
+    "Valor": "ESL_HML",
+    "Id": 127
+  },
+  {
+    "Valor": "HML",
+    "Id": 129
+  },
+  {
+    "Valor": " ESL",
+    "Id": 128
+  },
+  {
+    "Valor": "teste",
+    "Id": 130
+  },
+  {
+    "Valor": "novoteste",
+    "Id": 131
+  }
+]

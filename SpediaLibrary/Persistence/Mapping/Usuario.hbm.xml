@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SpediaLibrary"
+                   namespace="SpediaLibrary.Transfer">
+  <class name="Usuario" table="Usuario">
+    <id name="Id">
+      <generator class="identity" />
+    </id>
+    <property name="IdApi" column="id_api" />
+    <property name="Email" />
+    <property name="Senha" />
+    <property name="Nome" />
+    <property name="Perfil" />
+    <property name="UsuarioSpedia" column="usuario_spedia" />
+    <property name="SenhaSpedia" column="senha_spedia" />
+  </class>
+</hibernate-mapping>

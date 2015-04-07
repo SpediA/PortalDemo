@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode title="Inicial" >
+      <siteMapNode title="DFe" >
+        <siteMapNode title="Mapa de Produção" url="Pages/MapaProducao" />
+        <siteMapNode title="Busca" url="Pages/Busca" />
+      </siteMapNode>
+      <siteMapNode title="SPED" >
+        <siteMapNode title="Mapa de Produção" url="Pages/MapaProducaoSped" />
+        <siteMapNode title="Busca" url="Pages/BuscaSped" />
+      </siteMapNode>
+      <siteMapNode title="Configurações" >
+        <siteMapNode title="Cadastro de Usuário" url="Pages/CadastroUsuario" />
+        <siteMapNode title="Cadastro de Empresas" url="Pages/CadastroEmpresa" />
+        <siteMapNode title="Cadastro de Atributo Adicional" url="Pages/CadastroAtributoAdicional" />
+        <siteMapNode title="Cadastro de Caixa Postal" url="Pages/CadastroCaixaPostal" />
+        <siteMapNode title="Status da Plataforma" url="Pages/StatusPlataforma" />
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

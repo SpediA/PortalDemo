@@ -1,0 +1,258 @@
+[INFO ]2015-03-19 14:57:28,429 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-19 14:57:28,474 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-19 14:57:28,953 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-19 14:57:28,953 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-19 15:00:03,801 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - 
+[ERROR]2015-03-19 15:00:32,770 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 191
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoConta.CarregaMapaProducao(TipoArquivo tipoArquivo) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoConta.cs:line 44
+   at SpediaWeb.Pages.MapaProducao.DefineMapaProducao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\MapaProducao.aspx.cs:line 158
+   at SpediaWeb.Pages.MapaProducao.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\MapaProducao.aspx.cs:line 52
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_ag0f4wli.7.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-03-19 15:01:12,095 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - 
+[INFO ]2015-03-19 15:06:31,753 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-19 15:06:31,796 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-19 15:06:31,878 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-19 15:06:31,878 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[ERROR]2015-03-23 11:22:57,571 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaWeb.SiteMaster.VerificaNotificacao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 158
+   at SpediaWeb.SiteMaster.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_zhfjzihv.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-03-23 11:34:10,384 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaWeb.SiteMaster.VerificaNotificacao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 158
+   at SpediaWeb.SiteMaster.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_index_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_zhfjzihv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-03-23 11:35:06,050 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaWeb.SiteMaster.VerificaNotificacao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 158
+   at SpediaWeb.SiteMaster.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_zhfjzihv.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-03-23 11:35:07,902 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaWeb.SiteMaster.VerificaNotificacao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 158
+   at SpediaWeb.SiteMaster.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_index_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_zhfjzihv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-03-23 11:35:44,436 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - {"message":"Authorization has been denied for this request."}
+[ERROR]2015-03-23 11:35:51,765 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 191
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoConta.CarregaMapaProducao(TipoArquivo tipoArquivo) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoConta.cs:line 44
+   at SpediaWeb.Pages.MapaProducao.DefineMapaProducao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\MapaProducao.aspx.cs:line 158
+   at SpediaWeb.Pages.MapaProducao.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\MapaProducao.aspx.cs:line 52
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_zhfjzihv.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-03-23 11:38:06,411 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-23 11:38:06,461 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-23 11:38:06,769 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-23 11:38:06,769 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[ERROR]2015-03-23 14:37:38,675 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 185
+   at SpediaLibrary.Util.AuxiliarJson.Posta(Object objetoASerializar, String endereco, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 59
+   at SpediaLibrary.Business.GerenciamentoArquivo.BuscaArquivosSped(FiltroBuscaSped filtro, Int32 inicio, Int32 quantidade) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoArquivo.cs:line 56
+   at SpediaWeb.Pages.BuscaSped.ExecutaBusca(Int32 pagina) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 472
+   at SpediaWeb.Pages.BuscaSped.BtnExecutarBuscaAvancadaTopo_Click(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 255
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_buscasped_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_zhfjzihv.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-03-23 15:41:38,565 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-23 15:41:38,616 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-23 15:41:38,805 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-23 15:41:38,805 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[ERROR]2015-03-23 15:45:44,513 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 185
+   at SpediaLibrary.Util.AuxiliarJson.Posta(Object objetoASerializar, String endereco, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 59
+   at SpediaLibrary.Business.GerenciamentoArquivo.BuscaArquivosSped(FiltroBuscaSped filtro, Int32 inicio, Int32 quantidade) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoArquivo.cs:line 56
+   at SpediaWeb.Pages.BuscaSped.ExecutaBusca(Int32 pagina) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 472
+   at SpediaWeb.Pages.BuscaSped.BtnExecutarBuscaAvancadaBase_Click(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 266
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_buscasped_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_5vdznacs.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-03-23 15:54:33,016 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-23 15:54:33,060 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-23 15:54:33,133 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-23 15:54:33,134 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 13:07:59,965 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 13:08:00,017 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 13:08:00,289 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 13:08:00,289 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 13:08:57,726 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 13:08:57,770 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 13:08:57,876 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 13:08:57,876 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 13:11:13,888 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 13:11:13,932 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 13:11:14,043 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 13:11:14,043 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 13:15:22,078 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 13:15:22,121 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 13:15:22,194 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 13:15:22,194 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 13:36:16,138 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 13:36:16,181 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 13:36:16,415 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 13:36:16,415 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 13:38:52,691 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 13:38:52,732 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 13:38:52,805 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 13:38:52,806 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 14:29:01,202 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 14:29:01,245 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 14:29:01,323 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 14:29:01,323 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 14:49:52,341 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 14:49:52,387 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 14:49:52,512 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 14:49:52,513 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 15:09:49,601 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 15:09:49,662 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 15:09:49,743 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 15:09:49,743 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-03-24 16:52:47,176 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-03-24 16:52:47,217 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-03-24 16:52:47,662 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-03-24 16:52:47,662 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-01 17:42:11,553 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-01 17:42:11,612 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-01 17:42:12,161 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-01 17:42:12,161 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[ERROR]2015-04-01 17:44:25,932 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaLibrary.Business.Dominio.ValorTextoDe(Enum valor) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\Dominio.cs:line 470
+   at SpediaWeb.Pages.BuscaSped.RptResultadoBusca_ItemDataBound(Object sender, RepeaterItemEventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 299
+   at System.Web.UI.WebControls.Repeater.OnItemDataBound(RepeaterItemEventArgs e)
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at SpediaWeb.Pages.BuscaSped.ExecutaBusca(Int32 pagina) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 491
+   at SpediaWeb.Pages.BuscaSped.BtnFiltrarResultados_Click(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 244
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_buscasped_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_zx2qlnlz.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-04-01 17:46:18,565 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-01 17:46:18,608 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-01 17:46:18,693 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-01 17:46:18,693 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-02 10:10:43,647 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-02 10:10:43,702 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-02 10:10:44,065 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-02 10:10:44,065 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-02 10:16:33,299 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-02 10:16:33,351 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-02 10:16:33,434 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-02 10:16:33,434 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-02 10:19:17,684 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-02 10:19:17,727 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-02 10:19:17,808 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-02 10:19:17,808 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
