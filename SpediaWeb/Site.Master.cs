@@ -23,6 +23,7 @@ namespace SpediaWeb
     using SpediaLibrary.Business;
     using SpediaLibrary.Transfer;
     using SpediaWeb.Pages;
+    using SpediaLibrary.Util;
     using SpediaWeb.Presentation.Common;
 
     /// <summary>
@@ -79,6 +80,7 @@ namespace SpediaWeb
         /// <param name="e">Contém os argumentos fornecidos nesse evento</param>
         protected void Page_Load(object sender, EventArgs e)
         {
+
             string page = Path.GetFileName(Request.Url.AbsolutePath);
 
             this.VerificaNotificacao();
@@ -86,14 +88,24 @@ namespace SpediaWeb
             this.LblUsuario.Text = this.usuario.Email;
             this.DivMensagemUpload.Visible = false;
 
+
             this.BtnVisualizarNFe.Visible = page == PAGINA_BUSCA;
             this.BtnMapaProducao.Visible = (page == PAGINA_BUSCA) || (page == PAGINA_MAPA_PRODUCAO);
             this.BtnBusca.Visible = (page == PAGINA_BUSCA) || (page == PAGINA_MAPA_PRODUCAO);
 
             if (this.IsPostBack && this.FuArquivo.HasFile)
             {
+
                 this.ProcessaUpload();
             }
+
+            if (this.IsPostBack && this.ViewState["success"] != null)
+            {
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "temp", "hideLoading();", true);
+                Response.Redirect(Path.GetFileName(Request.Url.AbsolutePath));
+            }
+          
+
         }
 
         /// <summary>
@@ -163,5 +175,66 @@ namespace SpediaWeb
                 this.LblNumeroNotificacoes.Visible = true;
             }
         }
+
+        protected void ChangePassword1_ChangingPassword(object sender, EventArgs e)
+        {
+            ChangePassword1.ChangePasswordFailureText = "";
+            ChangePassword1.SuccessTemplateContainer.Visible = false;
+            
+            try
+            {
+                string senhaAtual = this.ChangePassword1.CurrentPassword.ToString();
+                string novaSenha = this.ChangePassword1.NewPassword.ToString();
+
+                if (this.usuario != null && Autenticacao.ValidaSHA1Hash(senhaAtual, usuario.Senha))
+                {
+                    if (novaSenha != senhaAtual)
+                    {
+                        //altera senha no banco 
+
+                        string hashNovaSenha = Autenticacao.ObtemSHA1Hash(novaSenha);
+                        this.usuario.Senha = hashNovaSenha;
+
+                        if (GerenciamentoUsuario.AtualizaUsuario(this.usuario))
+                        {
+                            ViewState["success"] = "true";
+                            ChangePassword1.SuccessTemplate.InstantiateIn(ChangePassword1);
+                            ChangePassword1.ChangePasswordTemplateContainer.Visible = false;
+                        }
+                        else
+                        {
+                            ChangePassword1.ChangePasswordFailureText = "Problemas ao alterar a senha. A senha não foi alterada.";
+                        }
+                    }
+                    else
+                    {
+                        ChangePassword1.ChangePasswordFailureText = "Senha nova deve ser diferente da senha atual.";
+
+                    }
+                }
+                else
+                { 
+                    ChangePassword1.ChangePasswordFailureText = "Senha atual não confere.";
+                }
+
+                ((LoginCancelEventArgs)e).Cancel = true;
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "temp", "hideLoading();", true);
+            }
+            catch (Exception ex)
+            {
+                Log.Info(ex.InnerException == null ? ex.Message : ex.InnerException.ToString());
+                ChangePassword1.ChangePasswordFailureText = "Problemas ao alterar a senha. A senha não foi alterada.";
+                ((LoginCancelEventArgs)e).Cancel = true;
+                return;
+            }
+        }
+
+
+        protected void ChangePassword1_CancelButtonClick(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "temp", "hideLoading();", true);
+            Response.Redirect(Path.GetFileName(Request.Url.AbsolutePath));
+        }
+
     }
 }

@@ -61,15 +61,6 @@ namespace SpediaWeb.Pages
         private const string MENSAGEM_ERRO_ENVIO_EMAIL = "O usuário foi criado, porém ocorreu um erro ao tentar enviar o e-mail de boas vindas!";
 
         /// <summary> Representa uma mensagem de erro </summary>
-        private const string MENSAGEM_ERRO_INCLUSAO_ATRIBUTOS = "Erro ao tentar incluir permissões!";
-
-        /// <summary> Representa uma mensagem de erro </summary>
-        private const string MENSAGEM_ERRO_ATUALIZACAO_ATRIBUTOS = "Erro ao tentar atualizar as permissões!";
-
-        /// <summary> Representa uma mensagem de erro </summary>
-        private const string MENSAGEM_ERRO_EXCLUSAO_ATRIBUTOS = "Erro ao tentar excluir permissões!";
-
-        /// <summary> Representa uma mensagem de erro </summary>
         private const string MENSAGEM_ERRO_NOME_VAZIO = "O nome do usuário não pode ser vazio!";
 
         /// <summary> Representa uma mensagem de erro </summary>
@@ -241,11 +232,6 @@ namespace SpediaWeb.Pages
                 return null;
             }
 
-            if (!GerenciamentoAtributoAdicional.AtualizaValoresAtributoAdicional(usuario.IdApi.Value, false, this.TxtPermissoes.Text))
-            {
-                this.LblMensagem.Text = MENSAGEM_ERRO_INCLUSAO_ATRIBUTOS;
-                return null;
-            }
 
             if (GerenciamentoUsuario.CriaUsuario(usuario, novaSenha) == null)
             {
@@ -268,27 +254,10 @@ namespace SpediaWeb.Pages
         private void EditaUsuario(int idUsuario)
         {
             Usuario usuario = GerenciamentoUsuario.CarregaUsuario(idUsuario);
-            List<AtributoAdicional> atributosAdicionais = (List<AtributoAdicional>)GerenciamentoUsuario.ObtemAtributosAdicionais(usuario.IdApi.Value);
 
             this.TxtNome.Text = usuario.Nome;
             this.TxtEmail.Text = usuario.Email;
             this.DdPerfil.SelectedValue = ((byte)usuario.Perfil).ToString();
-
-            if (atributosAdicionais != null)
-            {
-                List<Parametro> parametros = new List<Parametro>();
-
-                foreach (AtributoAdicional atributoAdicional in atributosAdicionais)
-                {
-                    foreach (Parametro valor in atributoAdicional.Valores)
-                    {
-                        parametros.Add(new Parametro() { Id = valor.Id, Valor = valor.Valor });
-                    }
-                }
-
-                string json = SpediaLibrary.Util.AuxiliarJson.Serializa(parametros);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "AtributoAdicional", "defineAtributos(" + json + ");", true);
-            }
 
             this.BtnSalvar.CommandArgument = usuario.Id.ToString();
         }
@@ -327,12 +296,6 @@ namespace SpediaWeb.Pages
                 return;
             }
 
-            if (!GerenciamentoAtributoAdicional.AtualizaValoresAtributoAdicional(usuario.IdApi.Value, false, this.TxtPermissoes.Text))
-            {
-                this.LblMensagem.Text = MENSAGEM_ERRO_ATUALIZACAO_ATRIBUTOS;
-                return;
-            }
-
             if (!GerenciamentoUsuario.AtualizaUsuario(usuario))
             {
                 this.LblMensagem.Text = MENSAGEM_ERRO_EDICAO;
@@ -359,12 +322,6 @@ namespace SpediaWeb.Pages
             if (!GerenciamentoUsuario.ExcluiUsuarioApi(usuario.IdApi.Value))
             {
                 this.LblMensagem.Text = MENSAGEM_ERRO_EXCLUSAO_API;
-                return;
-            }
-
-            if (!GerenciamentoAtributoAdicional.AtualizaValoresAtributoAdicional(usuario.IdApi.Value, false, string.Empty))
-            {
-                this.LblMensagem.Text = MENSAGEM_ERRO_EXCLUSAO_ATRIBUTOS;
                 return;
             }
 
@@ -434,7 +391,6 @@ namespace SpediaWeb.Pages
             this.TxtNome.Text = string.Empty;
             this.TxtEmail.Text = string.Empty;
             this.DdPerfil.SelectedValue = byte.MinValue.ToString();
-            this.TxtPermissoes.Text = string.Empty;
             this.BtnSalvar.CommandArgument = string.Empty;
 
             this.RptUsuario.DataSource = usuarios.OrderBy(u => u.Nome);

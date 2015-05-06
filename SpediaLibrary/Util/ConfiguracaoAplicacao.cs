@@ -77,14 +77,6 @@ namespace SpediaLibrary.Util
             }
         }
 
-        /// <summary> Obtém o endereço do arquivo que contém os valores dos atributos adicionais</summary>
-        public static string EnderecoAtributosAdicionais
-        {
-            get
-            {
-                return HttpContext.Current.Server.MapPath("~/Content/Auxiliary/AtributosAdicionais.txt");
-            }
-        }
 
         /// <summary>
         /// Obtém a URL da API da Spedia

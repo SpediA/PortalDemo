@@ -20,154 +20,286 @@
 </head>
 <body>
     <form runat="server" onsubmit="showLoading()">
-    <header class="container-fluid">
-        <div class="row space">
-            <div class="col-xs-3 col-xs-offset-1 header-group-button">
-                <a href="#" class="dropdown-toggle btn-group right-space" data-toggle="dropdown"><span class="glyphicon glyphicon-align-justify"></span></a>
+
+        <asp:ScriptManager ID="sct" runat="server"></asp:ScriptManager>
+
+        <header class="container-fluid">
+            <div class="row space">
+                <div class="col-xs-3 col-xs-offset-1 header-group-button">
+                    <a href="#" class="dropdown-toggle btn-group right-space" data-toggle="dropdown"><span class="glyphicon glyphicon-align-justify"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/spedia/Pages/MapaProducao">DF-e</a></li>
                         <li><a href="/spedia/Pages/BuscaSped">SPED</a></li>
                     </ul>
-                <a href="/spedia/Pages/MapaProducao" class="btn-group"><img src="/spedia/Content/Images/logo.png" alt="SpediA logo" width="150"></a>
-            </div>
-            <div class="col-xs-2">
-                <div>
-                    <a href="#" class="btn button-secondary" data-toggle="modal" data-target="#uploadArquivo" onclick="buildFileInput(); return false;">
-                        <span class="glyphicon glyphicon-upload"></span>
-                        <span>UPLOAD</span>
-                    </a>
+                    <a href="/spedia/Pages/MapaProducao" class="btn-group"><img src="/spedia/Content/Images/logo.png" alt="SpediA logo" width="150"></a>
                 </div>
-            </div>
-            <div class="col-xs-3 header-group-button text-right">
-                <div class="btn-group right-space text-center">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
+                <div class="col-xs-2">
+                    <div>
+                        <a href="#" class="btn button-secondary" data-toggle="modal" data-target="#uploadArquivo" onclick="buildFileInput(); return false;">
+                            <span class="glyphicon glyphicon-upload"></span>
+                            <span>UPLOAD</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-3 header-group-button text-right">
+                    <div class="btn-group right-space text-center">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/spedia/Pages/CadastroUsuario">Cadastro de Usuários</a></li>
                             <li><a href="/spedia/Pages/CadastroEmpresa">Cadastro de Empresa</a></li>
-                            <li><a href="/spedia/Pages/CadastroAtributoAdicional">Cadastro de Atributo Adicional</a></li>
                             <li><a href="/spedia/Pages/CadastroCaixaPostal">Cadastro de Caixa Postal</a></li>
                             <li><a href="/spedia/Pages/StatusPlataforma">Status da Plataforma</a></li>
                         </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a href="/spedia/Pages/Notificacao">
+                            <span class="glyphicon glyphicon-bell"></span>
+                            <asp:Label runat="server" ID="LblNumeroNotificacoes" CssClass="badge" Visible="false" />
+                        </a>
+                    </div>
                 </div>
-                <div class="btn-group">
-                    <a href="/spedia/Pages/Notificacao">
-                        <span class="glyphicon glyphicon-bell"></span>
-                        <asp:Label runat="server" ID="LblNumeroNotificacoes" CssClass="badge" Visible="false" />
+                <div class="col-xs-2 text-right">
+                    <a href="#" class="dropdown-toggle btn button-secondary" data-toggle="dropdown">
+                        <asp:Label runat="server" ID="LblUsuario" />
                     </a>
-                </div>
-            </div>
-            <div class="col-xs-2 text-right">
-                <a href="#" class="dropdown-toggle btn button-secondary" data-toggle="dropdown">
-                    <asp:Label runat="server" ID="LblUsuario" />
-                </a>
                     <ul class="dropdown-menu left-space" role="menu">
                         <li><asp:LinkButton runat="server" ID="BtnSair" OnClick="BtnSair_Click">Sair</asp:LinkButton></li>
+                        <li><asp:LinkButton runat="server" ID="BtnAlterarSenha" data-toggle="modal" data-target="#alterarSenhaModal">Alterar Senha</asp:LinkButton></li>
                     </ul>
+                </div>
             </div>
-        </div>
-        <div class="row line-division">
-            <div class="col-xs-4 col-xs-offset-1">
-                <asp:SiteMapPath runat="server" CssClass="path-separator"
-                    NodeStyle-Font-Underline="false">
-                    <PathSeparatorTemplate>
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </PathSeparatorTemplate>
-                </asp:SiteMapPath>
+
+            <div class="modal fade" id="alterarSenhaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" style="width:500px">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" runat="server" id="fechar" onserverclick="ChangePassword1_CancelButtonClick" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="tituloAlterarSenhaModal">Alteração de senha</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="left-space right-space">
+
+                                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                        <ContentTemplate>
+                                            <div>
+                                                <asp:ChangePassword Style="width: 100%" ID="ChangePassword1" runat="server" OnChangingPassword="ChangePassword1_ChangingPassword">
+
+                                                    <ChangePasswordTemplate>
+                                                        <div style="width: 100%" class="container body">
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <asp:Label AssociatedControlID="CurrentPassword" ID="CurrentPasswordLabel" runat="server">
+                                                                    Senha:
+                                                                    </asp:Label>
+                                                                </div>
+                                                                <div>
+                                                                    <asp:TextBox CssClass="input" ID="CurrentPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator
+                                                                        ControlToValidate="CurrentPassword"
+                                                                        ErrorMessage="Digite a senha atual."
+                                                                        ID="CurrentPasswordRequired"
+                                                                        runat="server"
+                                                                        ToolTip="Digite a senha atual."
+                                                                        ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <asp:Label AssociatedControlID="NewPassword" ID="NewPasswordLabel" runat="server">
+                                                                    Nova senha:
+                                                                    </asp:Label>
+                                                                </div>
+                                                                <div>
+                                                                    <asp:TextBox CssClass="input" ID="NewPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator
+                                                                        ControlToValidate="NewPassword"
+                                                                        ErrorMessage="Digite a nova senha."
+                                                                        ID="NewPasswordRequired"
+                                                                        runat="server"
+                                                                        ToolTip="Digite a nova senha"
+                                                                        ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <asp:Label AssociatedControlID="ConfirmNewPassword" ID="ConfirmNewPasswordLabel" runat="server">
+                                                                    Confirmação nova senha:
+                                                                    </asp:Label>
+                                                                </div>
+                                                                <div>
+                                                                    <asp:TextBox CssClass="input" ID="ConfirmNewPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator
+                                                                        ControlToValidate="ConfirmNewPassword"
+                                                                        ErrorMessage="Digite a confirmação da nova senha."
+                                                                        ID="ConfirmNewPasswordRequired"
+                                                                        runat="server"
+                                                                        ToolTip="Digite a confirmação da nova senha"
+                                                                        ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
+                                                                </div>
+                                                            </div>
+                                                            <div runat="server" role="alert" class="form-group text-danger">
+                                                                <asp:CompareValidator
+                                                                    ControlToCompare="NewPassword"
+                                                                    ControlToValidate="ConfirmNewPassword"
+                                                                    Display="Dynamic"
+                                                                    ErrorMessage="Nova senha e confirmação da nova senha devem ser idênticas."
+                                                                    ID="NewPasswordCompare"
+                                                                    runat="server"
+                                                                    ValidationGroup="ChangePassword1">
+                                                                </asp:CompareValidator>
+                                                            </div>
+                                                            <div runat="server" role="alert" class="form-group text-danger">
+                                                                <asp:Literal EnableViewState="False"
+                                                                    ID="FailureText" runat="server">
+                                                                </asp:Literal>
+                                                            </div>
+
+                                                        </div>
+                                                        <div style="width: 100%; text-align: center">
+                                                            <asp:Button
+                                                                CommandName="ChangePassword"
+                                                                ID="ChangePasswordButton"
+                                                                runat="server"
+                                                                Text="Alterar a senha"
+                                                                ValidationGroup="ChangePassword1"
+                                                                CssClass="btn button-secondary" />
+                                                        </div>
+                                                    </ChangePasswordTemplate>
+
+                                                    <SuccessTemplate>
+                                                        <div style="width: 100%" class="form-group">
+                                                            <div class="text-success" style="text-align: center">
+                                                                <span>Senha alterada com sucesso!</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width: 100%; text-align: right">
+                                                            <asp:Button runat="server" CssClass="btn button-primary" ID="BtnOk" Text="Continuar"></asp:Button>
+                                                        </div>
+                                                    </SuccessTemplate>
+
+                                                </asp:ChangePassword>
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-6 text-right sub-bar">
-                <a runat="server" id="BtnVisualizarNFe" href="https://leitorxmlnfe.websiteseguro.com/" target="_blank" class="right-space">
-                    <span class="glyphicon glyphicon-list-alt"></span>
-                </a>
-                <asp:LinkButton runat="server" ID="BtnMapaProducao" PostBackUrl="~/Pages/MapaProducao" class="right-space">
+
+            <div class="row line-division">
+                <div class="col-xs-4 col-xs-offset-1">
+                    <asp:SiteMapPath runat="server" CssClass="path-separator"
+                        NodeStyle-Font-Underline="false">
+                        <PathSeparatorTemplate>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </PathSeparatorTemplate>
+                    </asp:SiteMapPath>
+                </div>
+                <div class="col-xs-6 text-right sub-bar">
+                    <a runat="server" id="BtnVisualizarNFe" href="https://leitorxmlnfe.websiteseguro.com/" target="_blank" class="right-space">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                    </a>
+                    <asp:LinkButton runat="server" ID="BtnMapaProducao" PostBackUrl="~/Pages/MapaProducao" class="right-space">
                     <span class="glyphicon glyphicon-th-large"></span>
-                </asp:LinkButton>
-                <asp:LinkButton runat="server" ID="BtnBusca" PostBackUrl="~/Pages/Busca">
+                    </asp:LinkButton>
+                    <asp:LinkButton runat="server" ID="BtnBusca" PostBackUrl="~/Pages/Busca">
                     <span class="glyphicon glyphicon-search"></span>
-                </asp:LinkButton>
-            </div>
-        </div>
-    </header>
-    <div id="DivConteudo" class="container body">
-        <div class="row">
-            <div class="col-xs-6 col-xs-offset-3">
-                <div runat="server" id="DivMensagemUpload" role="alert" visible="false">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <asp:Label runat="server" ID="LblMensagemUpload" />
+                    </asp:LinkButton>
                 </div>
             </div>
-        </div>
-        <asp:ContentPlaceHolder runat="server" ID="Conteudo" />
-    </div>
-    <footer class="container-fluid">
-        <div class="row">
-            <div class="col-xs-4 space text-right">
-                <small>
-                    <span class="glyphicon glyphicon-copyright-mark"></span>
-                    <span>SPEDIA | Todos os Direitos Reservados - <%= DateTime.Now.Year %></span>
-                </small>
-            </div>
-            <div class="col-xs-5 space text-center">
-                <strong>
-                    <a href="#"><span>TERMOS</span></a>
-                    <span>|</span>
-                    <a href="#"><span>PRIVACIDADE</span></a>
-                    <span>|</span>
-                    <a href="#"><span>SEGURANÇA</span></a>
-                </strong>
-            </div>
-        </div>
-    </footer>
-    <div class="modal fade" id="uploadArquivo" tabindex="-1" role="dialog" aria-labelledby="tituloUploadArquivo" aria-hidden="true">
-        <div class="modal-dialog" style="width: 800px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="tituloUploadArquivo">Envio de Documentos</h4>
+        </header>
+        <div id="DivConteudo" class="container body">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <div runat="server" id="DivMensagemUpload" role="alert" visible="false">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <asp:Label runat="server" ID="LblMensagemUpload" />
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="left-space right-space">
-                            <asp:FileUpload runat="server" ID="FuArquivo" />
+            </div>
+            <asp:ContentPlaceHolder runat="server" ID="Conteudo" />
+        </div>
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4 space text-right">
+                    <small>
+                        <span class="glyphicon glyphicon-copyright-mark"></span>
+                        <span>SPEDIA | Todos os Direitos Reservados - <%= DateTime.Now.Year %></span>
+                    </small>
+                </div>
+                <div class="col-xs-5 space text-center">
+                    <strong>
+                        <a href="#"><span>TERMOS</span></a>
+                        <span>|</span>
+                        <a href="#"><span>PRIVACIDADE</span></a>
+                        <span>|</span>
+                        <a href="#"><span>SEGURANÇA</span></a>
+                    </strong>
+                </div>
+            </div>
+        </footer>
+        <div class="modal fade" id="uploadArquivo" tabindex="-1" role="dialog" aria-labelledby="tituloUploadArquivo" aria-hidden="true">
+            <div class="modal-dialog" style="width: 800px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="tituloUploadArquivo">Envio de Documentos</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="left-space right-space">
+                                <asp:FileUpload runat="server" ID="FuArquivo" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="DivLoading" class="loading-animation">
-        <img src="/spedia/Content/Images/loader.gif" />
-    </div>
-    <script type="text/javascript">
+        <div id="DivLoading" class="loading-animation">
+            <img src="/spedia/Content/Images/loader.gif" />
+        </div>
+        <script type="text/javascript">
 
-        var download = false;
+            var download = false;
 
-        $('#DivConteudo').css('min-height', 500);
-        
-        function buildFileInput() {
-            $('#' + '<%= FuArquivo.ClientID %>').fileinput({
-                browseClass: "btn button-primary",
-                browseLabel: "<span style=\"margin-left: 5px;\">Escolha o Arquivo</span>",
-                browseIcon: '<span class="glyphicon glyphicon-folder-open"></span>',
-                removeClass: "btn button-red",
-                removeLabel: "<span style=\"margin-left: 5px;\">Excluir</span>",
-                removeIcon: '<span class="glyphicon glyphicon-trash"></span>',
-                showPreview: false,
-                uploadClass: "btn button-secondary",
-                uploadLabel: "<span style=\"margin-left: 5px;\">Enviar</span>",
-                uploadIcon: '<span class="glyphicon glyphicon-upload"></span>'
-            });
-        };
+            $('#DivConteudo').css('min-height', 500);
 
-        function showLoading(e) {
-            if (!download)
-                $('#DivLoading').css("display", "block");
-        };
+            function buildFileInput() {
+                $('#' + '<%= FuArquivo.ClientID %>').fileinput({
+                    browseClass: "btn button-primary",
+                    browseLabel: "<span style=\"margin-left: 5px;\">Escolha o Arquivo</span>",
+                    browseIcon: '<span class="glyphicon glyphicon-folder-open"></span>',
+                    removeClass: "btn button-red",
+                    removeLabel: "<span style=\"margin-left: 5px;\">Excluir</span>",
+                    removeIcon: '<span class="glyphicon glyphicon-trash"></span>',
+                    showPreview: false,
+                    uploadClass: "btn button-secondary",
+                    uploadLabel: "<span style=\"margin-left: 5px;\">Enviar</span>",
+                    uploadIcon: '<span class="glyphicon glyphicon-upload"></span>'
+                });
+            };
 
-        function setDownload() {
-            download = true;
-        };
+            function showLoading(e) {
+                if (!download)
+                    $('#DivLoading').css("display", "block");
+            };
 
-    </script>
+
+            function hideLoading(e) {
+                if (!download)
+                    $('#DivLoading').css("display", "none");
+            };
+
+            function setDownload() {
+                download = true;
+            };
+
+
+
+        </script>
     </form>
 </body>
 </html>

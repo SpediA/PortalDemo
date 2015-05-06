@@ -176,7 +176,6 @@
     <Content Include="Global.asax" />
     <Content Include="Pages\Busca.aspx" />
     <Content Include="Pages\BuscaSped.aspx" />
-    <Content Include="Pages\CadastroAtributoAdicional.aspx" />
     <Content Include="Pages\CadastroCaixaPostal.aspx" />
     <Content Include="Pages\CadastroEmpresa.aspx" />
     <Content Include="Pages\CadastroUsuario.aspx" />
@@ -195,7 +194,6 @@
     <Content Include="Scripts\bloodhound.js" />
     <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootstrap-tagsinput.min.js.map" />
-    <Content Include="Pages\AtributosAdicionais.ashx" />
     <None Include="Properties\PublishProfiles\SpediaDeploy.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Pages\Logon.aspx" />
@@ -225,6 +223,9 @@
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <None Include="Web.LocalDebug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -239,9 +240,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AtributosAdicionais.ashx.cs">
-      <DependentUpon>AtributosAdicionais.ashx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Busca.aspx.cs">
       <DependentUpon>Busca.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,13 +253,6 @@
     </Compile>
     <Compile Include="Pages\BuscaSped.aspx.designer.cs">
       <DependentUpon>BuscaSped.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\CadastroAtributoAdicional.aspx.cs">
-      <DependentUpon>CadastroAtributoAdicional.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\CadastroAtributoAdicional.aspx.designer.cs">
-      <DependentUpon>CadastroAtributoAdicional.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\CadastroCaixaPostal.aspx.cs">
       <DependentUpon>CadastroCaixaPostal.aspx</DependentUpon>
@@ -367,8 +358,25 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LocalDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\SlowCheetah.2.5.14\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(LOCALAPPDATA)\Microsoft\MSBuild\SlowCheetah\v1\Microsoft.Transforms.targets" Condition="Exists('$(LOCALAPPDATA)\Microsoft\MSBuild\SlowCheetah\v1\Microsoft.Transforms.targets')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
     <VisualStudio>
@@ -388,6 +396,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

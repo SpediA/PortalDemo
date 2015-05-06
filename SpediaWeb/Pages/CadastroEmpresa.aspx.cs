@@ -49,15 +49,6 @@ namespace SpediaWeb.Pages
         private const string MENSAGEM_ERRO_EXCLUSAO = "Erro ao tentar excluir empresa!";
 
         /// <summary> Representa uma mensagem de erro </summary>
-        private const string MENSAGEM_ERRO_INCLUSAO_ATRIBUTOS = "Erro ao tentar incluir permissões!";
-
-        /// <summary> Representa uma mensagem de erro </summary>
-        private const string MENSAGEM_ERRO_ATUALIZACAO_ATRIBUTOS = "Erro ao tentar atualizar as permissões!";
-
-        /// <summary> Representa uma mensagem de erro </summary>
-        private const string MENSAGEM_ERRO_EXCLUSAO_ATRIBUTOS = "Erro ao tentar excluir permissões!";
-
-        /// <summary> Representa uma mensagem de erro </summary>
         private const string MENSAGEM_ERRO_NOME_VAZIO = "A razão social da empresa não pode ser vazia!";
 
         /// <summary> Representa uma mensagem de erro </summary>
@@ -209,12 +200,6 @@ namespace SpediaWeb.Pages
                 return;
             }
 
-            if (!GerenciamentoAtributoAdicional.AtualizaValoresAtributoAdicional(empresa.Id.Value, true, this.TxtPermissoes.Text))
-            {
-                this.LblMensagem.Text = MENSAGEM_ERRO_INCLUSAO_ATRIBUTOS;
-                return;
-            }
-
             this.DivMensagem.Attributes["class"] = ConstantesGlobais.CLASSE_MENSAGEM_SUCESSO;
             this.LblMensagem.Text = MENSAGEM_SUCESSO_INCLUSAO;
 
@@ -229,7 +214,6 @@ namespace SpediaWeb.Pages
         {
             this.empresas = (List<Empresa>)this.ViewState[ConstantesGlobais.EMPRESAS];
             Empresa empresa = this.empresas.First(e => e.Id == idEmpresa);
-            List<AtributoAdicional> atributosAdicionais = (List<AtributoAdicional>)GerenciamentoEmpresa.ObtemAtributosAdicionais(idEmpresa);
 
             this.TxtRazaoSocial.Text = empresa.RazaoSocial;
             this.TxtCnpj.Text = Util.FormataCnpj(empresa.Cnpj);
@@ -237,22 +221,6 @@ namespace SpediaWeb.Pages
             this.TxtMunicipio.Text = empresa.Municipio;
             this.DdUnidadeFederativa.SelectedValue = string.IsNullOrEmpty(empresa.UnidadeFederativa) ? 
                 byte.MinValue.ToString() : ((byte)(UnidadeFederativa)Dominio.ValorEnumDe(empresa.UnidadeFederativa, typeof(UnidadeFederativa))).ToString();
-
-            if (atributosAdicionais != null)
-            {
-                List<Parametro> parametros = new List<Parametro>();
-                
-                foreach (AtributoAdicional atributoAdicional in atributosAdicionais)
-                {
-                    foreach (Parametro valor in atributoAdicional.Valores)
-                    {
-                        parametros.Add(new Parametro() { Id = valor.Id, Valor = valor.Valor });
-                    }
-                }
-
-                string json = AuxiliarJson.Serializa(parametros);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "AtributoAdicional", "defineAtributos(" + json + ");", true);
-            }
 
             this.BtnSalvar.CommandArgument = empresa.Id.ToString();
         }
@@ -286,12 +254,6 @@ namespace SpediaWeb.Pages
                 return;
             }
 
-            if (!GerenciamentoAtributoAdicional.AtualizaValoresAtributoAdicional(empresa.Id.Value, true, this.TxtPermissoes.Text))
-            {
-                this.LblMensagem.Text = MENSAGEM_ERRO_ATUALIZACAO_ATRIBUTOS;
-                return;
-            }
-
             this.DivMensagem.Attributes["class"] = ConstantesGlobais.CLASSE_MENSAGEM_SUCESSO;
             this.LblMensagem.Text = MENSAGEM_SUCESSO_EDICAO;
 
@@ -313,12 +275,6 @@ namespace SpediaWeb.Pages
             if (!GerenciamentoEmpresa.ExcluiEmpresa(empresa.Id.Value))
             {
                 this.LblMensagem.Text = MENSAGEM_ERRO_EXCLUSAO;
-                return;
-            }
-
-            if (!GerenciamentoAtributoAdicional.AtualizaValoresAtributoAdicional(idEmpresa, true, string.Empty))
-            {
-                this.LblMensagem.Text = MENSAGEM_ERRO_EXCLUSAO_ATRIBUTOS;
                 return;
             }
 
@@ -371,7 +327,6 @@ namespace SpediaWeb.Pages
             this.TxtInscricaoEstadual.Text = string.Empty;
             this.TxtMunicipio.Text = string.Empty;
             this.DdUnidadeFederativa.SelectedValue = byte.MinValue.ToString();
-            this.TxtPermissoes.Text = string.Empty;
             this.BtnSalvar.CommandArgument = string.Empty;
 
             this.RptEmpresa.DataSource = this.empresas.OrderBy(e => e.RazaoSocial);

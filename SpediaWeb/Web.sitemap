@@ -12,7 +12,6 @@
       <siteMapNode title="Configurações" >
         <siteMapNode title="Cadastro de Usuário" url="Pages/CadastroUsuario" />
         <siteMapNode title="Cadastro de Empresas" url="Pages/CadastroEmpresa" />
-        <siteMapNode title="Cadastro de Atributo Adicional" url="Pages/CadastroAtributoAdicional" />
         <siteMapNode title="Cadastro de Caixa Postal" url="Pages/CadastroCaixaPostal" />
         <siteMapNode title="Status da Plataforma" url="Pages/StatusPlataforma" />
       </siteMapNode>

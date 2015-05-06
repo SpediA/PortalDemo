@@ -256,3 +256,550 @@
 [INFO ]2015-04-02 10:19:17,727 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
 [INFO ]2015-04-02 10:19:17,808 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
 [INFO ]2015-04-02 10:19:17,808 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-08 15:15:58,568 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-08 15:15:58,652 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-08 15:38:48,555 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-08 15:38:48,601 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-08 15:38:49,208 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-08 15:38:49,209 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-08 15:39:35,463 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-08 15:39:35,507 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-08 15:39:35,601 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-08 15:39:35,601 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-08 15:39:51,291 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - 
+[ERROR]2015-04-08 15:39:57,971 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 191
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoConta.CarregaMapaProducao(TipoArquivo tipoArquivo) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoConta.cs:line 44
+   at SpediaWeb.Pages.MapaProducao.DefineMapaProducao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\MapaProducao.aspx.cs:line 158
+   at SpediaWeb.Pages.MapaProducao.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\MapaProducao.aspx.cs:line 52
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_03ggcdb3.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-04-10 13:33:48,942 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-10 13:33:49,048 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-10 13:33:49,681 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-10 13:33:49,681 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-10 13:36:32,351 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - 
+[ERROR]2015-04-10 13:36:34,223 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 191
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoNotificacao.ObtemNotificacoes(Int64 aPartirDe) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoNotificacao.cs:line 73
+   at SpediaWeb.SiteMaster.VerificaNotificacao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 158
+   at SpediaWeb.SiteMaster.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_buscasped_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_03ggcdb3.7.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-04-10 13:36:36,535 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - 
+[ERROR]2015-04-10 13:36:38,119 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 191
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoNotificacao.ObtemNotificacoes(Int64 aPartirDe) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoNotificacao.cs:line 73
+   at SpediaWeb.SiteMaster.VerificaNotificacao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 158
+   at SpediaWeb.SiteMaster.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_buscasped_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_03ggcdb3.7.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-04-10 13:44:25,697 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - 
+[ERROR]2015-04-10 13:44:27,472 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 191
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoNotificacao.ObtemNotificacoes(Int64 aPartirDe) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoNotificacao.cs:line 73
+   at SpediaWeb.Pages.Notificacao.ObtemNotificacoes() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\Notificacao.aspx.cs:line 79
+   at SpediaWeb.Pages.Notificacao.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\Notificacao.aspx.cs:line 45
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_notificacao_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_cmthetp3.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-04-10 13:44:31,334 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - 
+[ERROR]2015-04-10 13:44:42,647 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 191
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoNotificacao.ObtemNotificacoes(Int64 aPartirDe) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoNotificacao.cs:line 73
+   at SpediaWeb.Pages.Notificacao.ObtemNotificacoes() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\Notificacao.aspx.cs:line 79
+   at SpediaWeb.Pages.Notificacao.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\Notificacao.aspx.cs:line 45
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_notificacao_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_cmthetp3.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-04-10 13:45:44,868 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - {"message":"Cadeia de certificados inválida"}
+[INFO ]2015-04-10 13:45:44,882 SpediaWeb.Pages.BuscaSped.BtnSolicitarAssinatura_Click BuscaSped - The remote server returned an error: (400) Bad Request.
+[INFO ]2015-04-10 13:46:56,439 SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao AuxiliarJson - {"message":"Cadeia de certificados inválida"}
+[INFO ]2015-04-10 13:46:56,447 SpediaWeb.Pages.BuscaSped.BtnSolicitarAssinatura_Click BuscaSped - The remote server returned an error: (400) Bad Request.
+[INFO ]2015-04-22 15:28:49,583 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-22 15:28:49,675 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-22 15:28:49,975 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-22 15:28:49,975 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-04-22 16:00:06,998 SpediaWeb.Pages.BuscaSped.BtnSolicitarAssinatura_Click BuscaSped - Object reference not set to an instance of an object.
+[INFO ]2015-04-30 14:39:04,306 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-04-30 14:39:04,392 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-04-30 14:39:04,633 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-04-30 14:39:04,633 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-05-04 09:27:13,033 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-05-04 09:27:13,082 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-05-04 09:27:13,444 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-05-04 09:27:13,444 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[ERROR]2015-05-04 09:32:28,344 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_cadastroempresa_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_dc42shgk.5.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 09:33:29,663 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_qxawp5zi.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 09:34:24,179 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_qxawp5zi.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 09:36:54,917 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_qxawp5zi.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 09:37:56,723 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_qxawp5zi.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 09:38:45,961 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_qxawp5zi.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 09:41:08,201 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_qxawp5zi.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 09:42:31,953 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Unable to connect to SQL Server database. ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   at System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)
+   at System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)
+   at System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)
+   at System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)
+   at System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)
+   at System.Web.Security.MembershipProvider.GetUser(String username, Boolean userIsOnline, Boolean throwOnError)
+   at System.Web.UI.WebControls.ChangePassword.AttemptChangePassword()
+   at System.Web.UI.WebControls.ChangePassword.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.WebControls.Button.OnCommand(CommandEventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_mapaproducao_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_qxawp5zi.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[INFO ]2015-05-04 10:15:06,749 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-05-04 10:15:06,823 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-05-04 10:15:07,026 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-05-04 10:15:07,026 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[INFO ]2015-05-04 15:37:15,625 SpediaWeb.Global.Application_Start Global - ***Iniciando a aplicação***
+[INFO ]2015-05-04 15:37:15,685 SpediaWeb.Global.Application_Start Global - Iniciando o FluentMigrator
+[INFO ]2015-05-04 15:37:15,924 SpediaWeb.Global.Application_Start Global - Terminado o FluentMigrator
+[INFO ]2015-05-04 15:37:15,924 SpediaWeb.Global.Application_Start Global - ***Aplicação iniciada com sucesso***
+[ERROR]2015-05-04 15:55:17,439 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 185
+   at SpediaLibrary.Util.AuxiliarJson.Posta(Object objetoASerializar, String endereco, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 59
+   at SpediaLibrary.Business.GerenciamentoArquivo.BuscaArquivosSped(FiltroBuscaSped filtro, Int32 inicio, Int32 quantidade) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoArquivo.cs:line 56
+   at SpediaWeb.Pages.BuscaSped.ExecutaBusca(Int32 pagina) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 472
+   at SpediaWeb.Pages.BuscaSped.BtnFiltrarResultados_Click(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Pages\BuscaSped.aspx.cs:line 244
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_buscasped_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_0vrscel2.7.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[ERROR]2015-05-04 15:57:28,157 SpediaWeb.Global.Application_Error Global - System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SpediaLibrary.Util.AuxiliarJson.ExecutaOperacao(String operacao, String endereco, Boolean usaUrlApi, Object objetoASerializar, Boolean upload) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 185
+   at SpediaLibrary.Util.AuxiliarJson.Obtem(String endereco) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Util\AuxiliarJson.cs:line 71
+   at SpediaLibrary.Business.GerenciamentoNotificacao.ObtemNotificacoes(Int64 aPartirDe) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaLibrary\Business\GerenciamentoNotificacao.cs:line 73
+   at SpediaWeb.SiteMaster.VerificaNotificacao() in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 170
+   at SpediaWeb.SiteMaster.Page_Load(Object sender, EventArgs e) in c:\Users\patrick\Desktop\SpediA-AplicacaoExemplo-v1.3\SpediA-AplicacaoExemplo-v1.3\Spedia\SpediaWeb\Site.Master.cs:line 86
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_buscasped_aspx.ProcessRequest(HttpContext context) in c:\Users\patrick\AppData\Local\Temp\Temporary ASP.NET Files\spedia\2b2c3519\58332391\App_Web_0vrscel2.7.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

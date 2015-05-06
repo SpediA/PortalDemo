@@ -54,7 +54,6 @@ Visual Studio 2013
 - Alterar as propriedades abaixo no arquivo SpediaWeb\Web.config
 - TempDirectory = Diretório onde serão gravados os arquivos temporários (O diretório deve ser previamente criado)
 - Template = Diretório onde serão gravados os templates de e-mail. Deve ser configurado para o caminho absoluto do diretório SpediaWeb\Templates\ do projeto
-- AdditionalAttributesFile = Caminho do arquivo de atributos do sistema (O diretório deve ser previamente criado)
 - Executar o projeto, acessar o endereço http://localhost:51776/spedia/Pages/Logon e realizar o login com o usuário padrão
 
 ### Credenciais padrão ###

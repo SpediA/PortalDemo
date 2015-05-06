@@ -49,14 +49,6 @@ namespace SpediaLibrary.Util
         /// <summary>Endereço da api para criar, editar, excluir ou alterar uma nova empresa, ou ainda listar todas</summary>
         public const string Empresa = "Empresa";
 
-        /// <summary>Endereço da api para criar, editar, excluir, alterar ou listar atributos adicionais ou seus domínios</summary>
-        public const string AtributoAdicional = "AtributoAdicional";
-
-        /// <summary>Endereço complemetar para listar valores de atributos adicionais a usuários ou empresas</summary>
-        public const string Atributos = "Atributos";
-
-        /// <summary>Endereço complemetar para vincular ou desvincular valores de atributos adicionais a usuários ou empresas</summary>
-        public const string Atributo = "Atributo";
 
         /// <summary>Endereço da api para listar todas as caixas postais</summary>
         public const string ContaEmail = "ContaEmail";

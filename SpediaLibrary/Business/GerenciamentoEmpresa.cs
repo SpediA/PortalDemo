@@ -105,75 +105,7 @@ namespace SpediaLibrary.Business
             }
         }
 
-        /// <summary>
-        /// Obtém a lista de valores dos atributos adicionais vinculados a empresa
-        /// </summary>
-        /// <param name="idEmpresa">Identificador da empresa</param>
-        /// <returns>Lista de valores de atributos adicionais</returns>
-        public static IList<AtributoAdicional> ObtemAtributosAdicionais(int idEmpresa)
-        {
-            try
-            {
-                string json = AuxiliarJson.Obtem(EnderecosApi.Empresa + "/" + idEmpresa + "/" + EnderecosApi.Atributos);
-
-                return (List<AtributoAdicional>)AuxiliarJson.Desserializa<List<AtributoAdicional>>(json);
-            }
-            catch (Exception ex)
-            {
-                Log.Info(ex.InnerException == null ? ex.Message : ex.InnerException.ToString());
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Atribui a empresa os valores de atributo adicional
-        /// </summary>
-        /// <param name="idEmpresa">Identificador da empresa</param>
-        /// <param name="valoresAtributoAdicional">Lista de identificadores dos valores do atributo adicional</param>
-        /// <returns>Indica se a atribuição foi bem sucedida</returns>
-        public static bool AtribuiValorAtributoAdicional(int idEmpresa, List<int> valoresAtributoAdicional)
-        {
-            try
-            {
-                foreach (int valor in valoresAtributoAdicional)
-                {
-                    AuxiliarJson.Coloca(null, EnderecosApi.Empresa + "/" + idEmpresa + "/" + EnderecosApi.Atributo + "/" + valor, true);
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Info(ex.InnerException == null ? ex.Message : ex.InnerException.ToString());
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Remove da empresa os valores de atributo adicional
-        /// </summary>
-        /// <param name="idEmpresa">Identificador da empresa</param>
-        /// <param name="valoresAtributoAdicional">Lista de identificadores dos valores do atributo adicional</param>
-        /// <returns>Indica se a remoção foi bem sucedida</returns>
-        public static bool RemoveValorAtributoAdicional(int idEmpresa, List<int> valoresAtributoAdicional)
-        {
-            try
-            {
-                foreach (int valor in valoresAtributoAdicional)
-                {
-                    AuxiliarJson.Exclui(EnderecosApi.Empresa + "/" + idEmpresa + "/" + EnderecosApi.Atributo + "/" + valor);
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Info(ex.InnerException == null ? ex.Message : ex.InnerException.ToString());
-                return false;
-            }
-        }
-
-        /// <summary>
+         /// <summary>
         /// Formata os dados de um participante em um formato pré-definido
         /// </summary>
         /// <param name="participante">Emissor ou destinatário de uma NFe</param>

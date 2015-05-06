@@ -42,9 +42,6 @@ namespace SpediaWeb.Presentation.Common
         /// <summary>Constante global para a sessão de caixas postais</summary>
         public const string CAIXAS_POSTAIS = "CaixasPostais";
 
-        /// <summary>Constante global para o caminho do arquivo que contem os valores dos atributos adicionais</summary>
-        public const string CAMINHO_ATRIBUTOS_ADICIONAIS = "/spedia/Content/Auxiliary/AtributosAdicionais.txt";
-
         /// <summary>Constante global para o nome do arquivo quando é realizado um download</summary>
         public const string NOME_ARQUIVO_DOWNLOAD = "\\SpediA-arquivo.zip";
 

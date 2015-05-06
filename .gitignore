@@ -187,3 +187,7 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/SpediaWeb/Logs/spedia_nhibernate_log.txt
+/SpediaWeb/Logs/spedia_log.txt
+/SpediaWeb/Logs/spedia_nhibernate_log.txt
+/SpediaWeb/Logs/spedia_log.txt
